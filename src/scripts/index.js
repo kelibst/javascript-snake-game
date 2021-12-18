@@ -13,9 +13,13 @@ let snake;
 
   setInterval(() => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    fruit.drw();
     snake.draw();
     snake.update();
-    fruit.drw();
+
+    if (snake.eatFruit(fruit)) {
+      fruit.pickLocation();
+    }
   }, 250);
 })();
 
