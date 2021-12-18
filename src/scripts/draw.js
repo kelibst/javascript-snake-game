@@ -1,7 +1,7 @@
 class Snake {
   constructor() {
     this.x = 0;
-    this.y = 0;
+    this.y = 150;
     this.xSpeed = scale * 1;
     this.ySpeed = 0;
     this.total = 0;
@@ -9,10 +9,10 @@ class Snake {
   }
   draw = () => {
     ctx.fillStyle = "#fff";
+    ctx.fillRect(this.x, this.y, scale, scale);
     for (let i = 0; i < this.tail.length - 1; i++) {
       ctx.fillRect(this.tail[i].x, this.tail[i].y, scale, scale);
     }
-    ctx.fillRect(this.x, this.y, scale, scale);
   };
 
   update = () => {
@@ -20,7 +20,7 @@ class Snake {
       this.tail[i] = this.tail[i + 1];
     }
 
-    this.tail[this.total - 1] = { x: this.x, y: this.y };
+    this.tail[this.total] = { x: this.x, y: this.y };
 
     this.x += this.xSpeed;
     this.y += this.ySpeed;
