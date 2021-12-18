@@ -8,11 +8,14 @@ let snake;
 
 (function setup() {
   snake = new Snake();
+  fruit = new Fruit();
+  fruit.pickLocation();
 
   setInterval(() => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     snake.draw();
     snake.update();
+    fruit.drw();
   }, 250);
 })();
 
