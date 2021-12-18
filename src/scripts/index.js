@@ -4,6 +4,7 @@ const scale = 10;
 const row = canvas.height / scale;
 const columns = canvas.width / scale;
 const btnContainer = document.getElementById("btnCont");
+const score = document.querySelector(".total");
 
 let playing = false;
 let snake;
@@ -21,6 +22,7 @@ const setup = () => {
 
     if (snake.eatFruit(fruit)) {
       fruit.pickLocation();
+      score.innerHTML = snake?.total * 10;
     }
   }, 250);
 };

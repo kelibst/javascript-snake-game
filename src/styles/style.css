@@ -43,3 +43,12 @@ a.btn:hover {
 .canvas {
   position: relative;
 }
+span.total {
+  font-size: 2rem;
+  color: red;
+  margin: 1rem;
+}
+span.score {
+  font-size: 1.3rem;
+  color: white;
+}
