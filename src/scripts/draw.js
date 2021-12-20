@@ -16,12 +16,13 @@ class Snake {
   };
 
   update = () => {
-    for (let i = 0; i < this.tail.length - 1; i++) {
-      this.tail[i] = this.tail[i + 1];
+    if (this?.tail?.length > 0) {
+      for (let i = 0; i < this.tail.length - 1; i++) {
+        this.tail[i] = this.tail[i + 1];
+      }
     }
 
     this.tail[this.total] = { x: this.x, y: this.y };
-
     this.x += this.xSpeed;
     this.y += this.ySpeed;
 
