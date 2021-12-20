@@ -4,7 +4,9 @@
 
 A basic snake Game using JavaScript
 
-![screenshot](./screenshot.gif)## Built With
+![screenshot](./screenshot.gif)
+
+## Built With
 
 - HTML
 - CSS
