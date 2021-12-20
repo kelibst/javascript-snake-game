@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+}
+
+a.btn {
+  font-size: 2rem;
+  margin: 1rem 0;
+  font-family: monospace;
+  color: darkgreen;
+  transition: all 1s;
+}
+
+a.btn:hover {
+  color: lightgreen;
+  transform: scale(1.2);
+}
+
+.d-none {
+  display: none;
+}
+.btCont {
+  display: block;
+  top: 1.5rem;
+  position: absolute;
+  right: 13%;
+}
+
+.btCont > a {
+  font-size: 1rem;
+  margin: 1rem;
+  color: white;
+}
+.canvas {
+  position: relative;
+}
+span.total {
+  font-size: 2rem;
+  color: red;
+  margin: 1rem;
+}
+span.score {
+  font-size: 1.3rem;
+  color: white;
+}
